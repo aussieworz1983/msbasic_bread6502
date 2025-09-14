@@ -1,6 +1,6 @@
 
 .feature org_per_seg
-.zeropage
+.segment "ZEROPAGE"
 
 .org ZP_START1
 
@@ -200,4 +200,8 @@ CHRGOT = <(GENERIC_CHRGOT-GENERIC_CHRGET + CHRGET)
 CHRGOT2 = <(GENERIC_CHRGOT2-GENERIC_CHRGET + CHRGET)
 RNDSEED = <(GENERIC_RNDSEED-GENERIC_CHRGET + CHRGET)
 
+.ifdef WORZBASIC
+; Guard against overflow
+.assert * <= $0100, error, "ZEROPAGE overflow!"
 
+.endif

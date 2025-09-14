@@ -33,3 +33,7 @@
 .include "trig.s"
 .include "init.s"
 .include "extra.s"
+.include "lcd.s"
+.include "via.s"
+.include "sd_init.s"
+; .include "sound.s"

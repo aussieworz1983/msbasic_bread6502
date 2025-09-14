@@ -79,6 +79,12 @@
 .endif
 		keyword_rts "NEW", NEW
 
+.ifdef WORZBASIC
+		keyword_rts "LCDCMD", LCDCMD
+		keyword_rts "LCDPRINT", LCDPRINT
+			
+.endif
+
 		count_tokens
 
 		keyword	"TAB(", TOKEN_TAB

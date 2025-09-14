@@ -1,0 +1,11 @@
+.segment "CODE"
+.ifdef WORZBASIC
+
+VIA_PORTB = $5000
+VIA_PORTA = $5008
+VIA_DDRB = $5010
+VIA_DDRA = $5018
+
+
+
+.endif
